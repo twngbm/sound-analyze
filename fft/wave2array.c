@@ -17,7 +17,7 @@ int main()
     
     /* Open the WAV file. */
     info.format = 0;
-    sf = sf_open("h.wav",SFM_READ,&info);
+    sf = sf_open("../test.wav",SFM_READ,&info);
     if (sf == NULL)
         {
         printf("Failed to open the file.\n");
@@ -44,7 +44,7 @@ int main()
         printf("%d:%d\n",i*re_sample_dot,buf[(i*re_sample_dot*c)-c]);
     }
     /* Write the data to filedata.out. */
-    /*
+    
     out = fopen("filedata.out","w");
     for (i = 0; i < num; i += c)
         {
@@ -53,6 +53,6 @@ int main()
             fprintf(out,"%d ",buf[i+j]);
         fprintf(out,"\n");
         }
-    fclose(out);*/
+    fclose(out);
     return 0;
     }
