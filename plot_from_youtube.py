@@ -149,7 +149,7 @@ if __name__ == '__main__':
         try:
             ori_sound_data = struct.unpack(unpack_fmt, data)
         except:
-            quit
+            quit()
         sound_data=[]
         #print(len(ori_sound_data))
         
